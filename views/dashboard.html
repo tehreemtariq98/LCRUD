@@ -1,0 +1,43 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>DashBoard</title>
+</head>
+
+<body>
+    <h1></h1>
+    <div width:250px >
+    <form action="/dashboard" method="POST">
+    <input type="text" placeholder="name" />
+    <input type="email" placeholder="abc@gmail.com"  />
+    <input type="password" placeholder="password" />
+    <button type="submit">Create</button>
+</div>
+    <ul>
+        
+        <div width:250px>
+                <h2>Update Your Info</h2>
+                Enter email: <input type="email" placeholder="abc@gmail.com"  />
+                New Name: <input type="text" placeholder="name" />
+                New Password:<input type="password" placeholder="password" />
+                New email: <input type="email" placeholder="abc@gmail.com"  />
+                <button id="update-button">Update</button>
+        </div>
+
+            <h3>Registered Users</h3>
+        <% for(var i = 0; i < email.length; i++) {%>
+            <li>
+            <!-- Output name from the iterated object -->
+            <span><%= email[i].name %></span>:
+            <!-- Output quote from the iterated object -->
+            <span><%= email[i].email %></span>
+            </li>
+        <% } %>
+        </ul>
+    </form>
+
+ 
+</body>
+</html>
